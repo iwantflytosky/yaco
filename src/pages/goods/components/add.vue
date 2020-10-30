@@ -151,6 +151,7 @@ export default {
         ishot:1,
         status: 1,
       };
+      imageUrl=''
     },
   // 上传图片改变触发方法
     changeImg(e){
@@ -186,8 +187,10 @@ export default {
       let obj={
         ...this.form
       }
-      // console.log(obj);
-      obj.specsattr=JSON.stringify(obj.specsattr)
+      console.log(obj);
+      console.log(this.form);
+      obj.specsattr=JSON.stringify(obj.specsattr);
+     
       let data=new FormData();
       for(let i in obj){
         data.append(i,obj[i])
